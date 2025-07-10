@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int answer, guess, tries = 0;
+    srand(time(0));
+    answer = rand() % 100 + 1; 
+
+    printf("1부터 100 사이의 숫자\n");
+
+    do {
+        printf("숫자 입력: ");
+        scanf("%d", &guess);
+        tries++;
+
+        if (guess > answer)
+            printf("큽니다\n");
+        else if (guess < answer)
+            printf("작습니다\n");
+        else
+            printf("정답 시도횟수: %d회\n", tries);
+
+    } while (guess != answer);
+
+    return 0;
+}
