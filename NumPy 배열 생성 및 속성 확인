@@ -1,0 +1,33 @@
+
+import numpy as np
+
+
+print("=" * 50)
+print("1. 리스트로 ndarray 생성")
+print("=" * 50)
+list_a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+array_a = np.array(list_a)
+print(f"array_a: {array_a}\n")
+
+
+print("=" * 50)
+print("2. range() 함수로 ndarray 생성")
+print("=" * 50)
+array_b = np.array(range(0, 10))
+print(f"array_b: {array_b}\n")
+
+
+print("=" * 50)
+print("3. 짝수만 가지는 ndarray 생성")
+print("=" * 50)
+array_c = np.array(range(0, 10, 2))
+print(f"array_c: {array_c}\n")
+print("=" * 50)
+print("4. array_c의 속성")
+print("=" * 50)
+print(f"shape (형태):     {array_c.shape}")
+print(f"ndim (차원 수):   {array_c.ndim}")
+print(f"dtype (데이터 타입): {array_c.dtype}")
+print(f"size (전체 원소 개수): {array_c.size}")
+print(f"itemsize (각 원소의 바이트 크기): {array_c.itemsize} bytes")
+print(f"\n전체 배열 크기: {array_c.nbytes} bytes (size × itemsize = {array_c.size} × {array_c.itemsize})")
